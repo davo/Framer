@@ -94,7 +94,7 @@ class exports.DeviceComponent extends BaseClass
 		@handsImageLayer = new Layer parent: @hands, name: "handsImage"
 		@phone    = new Layer parent: @hands, name: "phone"
 		# This background is made slightly bigger than the screen to prevent the background shining through cracks
-		@screenBackground = new Layer parent: @hands, name: "screenBackground", backgroundColor: "black"
+		@screenBackground = new Layer parent: @hands, name: "screenBackground", backgroundColor: "white"
 		@screen   = new Layer parent: @hands, name: "phone"
 		@viewport = new Layer parent: @screen, name: "screen"
 		@content  = new Layer parent: @viewport, name: "viewport"
@@ -341,7 +341,7 @@ class exports.DeviceComponent extends BaseClass
 			# If we switch from fullscreen to a device, we should zoom to fit
 			shouldZoomToFit = @_deviceType is "fullscreen"
 
-			@screen.backgroundColor = "black"
+			@screen.backgroundColor = "white"
 			@screen.backgroundColor = device.backgroundColor if device.backgroundColor?
 
 			if device.deviceType is "computer"
@@ -1517,12 +1517,16 @@ Devices =
 
 	"custom":
 		name: "Custom"
-		deviceImageWidth: 874
-		deviceImageHeight: 1792
-		screenWidth: 750
-		screenHeight: 1334
-		devicePixelRatio: 2
-		deviceType: "phone"
+		padding: 0
+		screenWidth: 1920
+		screenHeight: 1080
+		deviceImageWidth: 1920
+		deviceImageHeight: 1080
+		devicePixelRatio: 1
+		hideBezel: true
+		deviceType: "computer"
+		deviceZoom: "fit"
+		contentZoom: 1
 
 	# iPad Air
 	"apple-ipad-air-2-silver": _.clone(iPadAir2BaseDevice)

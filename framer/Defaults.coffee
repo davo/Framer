@@ -29,11 +29,16 @@ Originals =
 		name: null
 	DeviceComponent:
 		fullScreen: false
-		padding: 50
-		deviceType: "apple-iphone-8-silver"
+		padding: 0
+		screenWidth: 1920
+		screenHeight: 1080
+		deviceImageWidth: 1920
+		deviceImageHeight: 1080
+		devicePixelRatio: 1
+		hideBezel: true
+		deviceType: "computer"
 		deviceZoom: "fit"
 		contentZoom: 1
-		orientation: "portrait"
 		keyboard: false
 		animationOptions:
 			time: .3
@@ -86,7 +91,7 @@ Originals =
 		mouseWheelEnabled: false
 		backgroundColor: null
 	Hints:
-		color: "rgba(144, 19, 254, 0.8)"
+		color: "rgba(144, 254, 0.8)"
 	Shadow:
 		x: 0
 		y: 0
