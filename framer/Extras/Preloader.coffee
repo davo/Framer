@@ -139,7 +139,7 @@ class Preloader extends BaseClass
 
 		@cover = new Layer
 			frame: Canvas
-			backgroundColor: "white"
+			backgroundColor: "black"
 
 		@progressIndicator = new CircularProgressComponent
 			size: 160
@@ -148,7 +148,7 @@ class Preloader extends BaseClass
 			visible: false
 
 		@progressIndicator.railsColor = Color.grey(0, 0.1)
-		@progressIndicator.progressColor = "rgb(75, 169, 248)"
+		@progressIndicator.progressColor = "rgba(255, 255, 255, 0.81)"
 		@progressIndicator.setProgress(@progress)
 
 		@brand = new Layer
@@ -168,7 +168,7 @@ class Preloader extends BaseClass
 			@setLogo(@_logo)
 		else
 			# Use the online logo, make sure we don't use the file:// protocol
-			logoUrl = "//resources.framerjs.com/static/images/preloader/framer-logo.png"
+			logoUrl = "//res.cloudinary.com/pixelbeat/image/upload/v1528676954/framer/framer.png"
 			logoUrl = "http:" + logoUrl if _.startsWith(window.location.href, "file://")
 			@setLogo(logoUrl)
 

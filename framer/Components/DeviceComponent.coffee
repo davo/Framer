@@ -94,7 +94,7 @@ class exports.DeviceComponent extends BaseClass
 		@handsImageLayer = new Layer parent: @hands, name: "handsImage"
 		@phone    = new Layer parent: @hands, name: "phone"
 		# This background is made slightly bigger than the screen to prevent the background shining through cracks
-		@screenBackground = new Layer parent: @hands, name: "screenBackground", backgroundColor: "white"
+		@screenBackground = new Layer parent: @hands, name: "screenBackground", backgroundColor: "black"
 		@screen   = new Layer parent: @hands, name: "phone"
 		@viewport = new Layer parent: @screen, name: "screen"
 		@content  = new Layer parent: @viewport, name: "viewport"
@@ -341,7 +341,7 @@ class exports.DeviceComponent extends BaseClass
 			# If we switch from fullscreen to a device, we should zoom to fit
 			shouldZoomToFit = @_deviceType is "fullscreen"
 
-			@screen.backgroundColor = "white"
+			@screen.backgroundColor = "black"
 			@screen.backgroundColor = device.backgroundColor if device.backgroundColor?
 
 			if device.deviceType is "computer"
@@ -1518,10 +1518,10 @@ Devices =
 	"custom":
 		name: "Custom"
 		padding: 0
-		screenWidth: 1920
-		screenHeight: 1080
-		deviceImageWidth: 1920
-		deviceImageHeight: 1080
+		screenWidth: 768
+		screenHeight: 480
+		deviceImageWidth: 1000
+		deviceImageHeight: 588
 		devicePixelRatio: 1
 		hideBezel: true
 		deviceType: "computer"

@@ -9,8 +9,8 @@ Framer.Color = (require "./Color").Color
 Framer.Gradient = (require "./Gradient").Gradient
 Framer.Layer = (require "./Layer").Layer
 Framer._Layer = Framer.Layer # So it won't be overridden by MobileScrollFix
-Framer.BackgroundLayer = (require "./BackgroundLayer").BackgroundLayer
-Framer.VideoLayer = (require "./VideoLayer").VideoLayer
+# Framer.BackgroundLayer = (require "./BackgroundLayer").BackgroundLayer
+# Framer.VideoLayer = (require "./VideoLayer").VideoLayer
 Framer.SVGLayer = (require "./SVGLayer").SVGLayer
 Framer.SVGPath = (require "./SVGPath").SVGPath
 Framer.SVGGroup = (require "./SVGGroup").SVGGroup
@@ -23,18 +23,18 @@ Framer.AnimationStateGroup = (require "./AnimationGroup").AnimationStateGroup
 Framer.Screen = (require "./Screen").Screen
 Framer.Align = (require "./Align").Align
 Framer.Blending = (require "./Blending").Blending
-Framer.print = (require "./Print").print
+# Framer.print = (require "./Print").print
 
 # Components
-Framer.ScrollComponent = (require "./Components/ScrollComponent").ScrollComponent
-Framer.PageComponent = (require "./Components/PageComponent").PageComponent
+# Framer.ScrollComponent = (require "./Components/ScrollComponent").ScrollComponent
+# Framer.PageComponent = (require "./Components/PageComponent").PageComponent
 Framer.SliderComponent = (require "./Components/SliderComponent").SliderComponent
-Framer.RangeSliderComponent = (require "./Components/RangeSliderComponent").RangeSliderComponent
+# Framer.RangeSliderComponent = (require "./Components/RangeSliderComponent").RangeSliderComponent
 Framer.DeviceComponent = (require "./Components/DeviceComponent").DeviceComponent
-Framer.GridComponent = (require "./Components/GridComponent").GridComponent
-Framer.FlowComponent = (require "./Components/FlowComponent").FlowComponent
+# Framer.GridComponent = (require "./Components/GridComponent").GridComponent
+# Framer.FlowComponent = (require "./Components/FlowComponent").FlowComponent
 Framer.CircularProgressComponent = (require "./Components/CircularProgressComponent").CircularProgressComponent
-Framer.MIDIComponent = (require "./Components/MIDIComponent").MIDIComponent
+# Framer.MIDIComponent = (require "./Components/MIDIComponent").MIDIComponent
 Framer.DeviceView = Framer.DeviceComponent # Compat
 
 _.extend(window, Framer) if window
@@ -48,9 +48,9 @@ Framer.LayerStyle = (require "./LayerStyle").LayerStyle
 Framer.AnimationLoop = (require "./AnimationLoop").AnimationLoop
 Framer.LinearAnimator = (require "./Animators/LinearAnimator").LinearAnimator
 Framer.BezierCurveAnimator = (require "./Animators/BezierCurveAnimator").BezierCurveAnimator
-Framer.SpringDHOAnimator = (require "./Animators/SpringDHOAnimator").SpringDHOAnimator
-Framer.SpringRK4Animator = (require "./Animators/SpringRK4Animator").SpringRK4Animator
-Framer.LayerDraggable = (require "./LayerDraggable").LayerDraggable
+# Framer.SpringDHOAnimator = (require "./Animators/SpringDHOAnimator").SpringDHOAnimator
+# Framer.SpringRK4Animator = (require "./Animators/SpringRK4Animator").SpringRK4Animator
+# Framer.LayerDraggable = (require "./LayerDraggable").LayerDraggable
 
 Framer.Curves = require "./Animators/Curves"
 window.Bezier = Framer.Curves.Bezier
@@ -76,7 +76,7 @@ Framer.resetDefaults = Defaults.reset
 # Create the default context, set it to invisble by default so
 # the preloader can pick it up if it needs to.
 Framer.DefaultContext = new Framer.Context(name: "Default")
-Framer.DefaultContext.backgroundColor = "white"
+Framer.DefaultContext.backgroundColor = "black"
 Framer.CurrentContext = Framer.DefaultContext
 
 window.Canvas = new (require "./Canvas").Canvas
